@@ -5,4 +5,4 @@ export const LOCALES = {
     UKRAINIAN: 'uk'
 }
 export const STORAGE_KEY = 'locale';
-export const LOCALHOST_URL_LENGTH = 15;
+export const LOCALHOST_URL_LENGTH = window.location.origin.length || 15;
