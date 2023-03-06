@@ -47,7 +47,7 @@ async function startApolloServer(typeDefs, resolvers) {
         res.sendFile(path.join(__dirname, '../../eneyida', 'build', 'index.html'))
     })
 
-    await new Promise(res => httpServer.listen({port: process.env.PORT || 80}, res))
+    await new Promise(res => httpServer.listen(process.env.PORT || 80, res))
     console.log(`yo yo --- ${server.graphqlPath}`)
 }
 
