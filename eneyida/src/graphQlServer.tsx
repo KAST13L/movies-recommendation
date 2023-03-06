@@ -19,7 +19,7 @@ export const GraphQlServer = ({component}: GraphQlServerPropsType,) => {
     const {state} = useContext(AppContext)
 
     const httpLink = createHttpLink({
-        uri: 'http://localhost:4000/graphql'
+        uri: process.env.PORT
     });
 
     const localeMiddleware = new ApolloLink((operation, forward) => {
