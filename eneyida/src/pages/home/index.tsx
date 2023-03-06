@@ -3,6 +3,7 @@ import {Box, Grid, Paper} from "@mui/material";
 import {MoviesList} from "../../components/moviesList";
 import {useMovies} from "../../hooks/useMovies/useMovies";
 import { SelectedCardMoviesList } from '../../components/selectedMoviesList';
+import { Filters } from '../../components/filters';
 
 export const Home = () => {
 
@@ -13,7 +14,7 @@ export const Home = () => {
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Paper elevation={5}>
-                        filters section
+                        <Filters/>
                     </Paper>
                 </Grid>
 
