@@ -1,0 +1,17 @@
+{
+  "name": "movies-recommendation",
+  "version": "1.0.0",
+  "description": "Movies recommendation demo app - React + GraphQl",
+  "main": "./server/src/index.js",
+  "scripts": {
+    "test": "error",
+    "start": "node /server/src/index.js",
+    "build": "cd server && npm run build",
+    "install": "cd eneyida && npm install --legacy-peer-deps && cd ../server && npm install"
+  },
+  "author": "Davyd Smyk",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  }
+}
