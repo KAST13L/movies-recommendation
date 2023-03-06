@@ -6,7 +6,7 @@
   "scripts": {
     "test": "error",
     "start": "node /server/src/index.js",
-    "build": "cd server && npm run build",
+    "build": "cd eneyida && npm run build",
     "install": "cd eneyida && npm install --legacy-peer-deps && cd ../server && npm install"
   },
   "author": "Davyd Smyk",
