@@ -6,8 +6,8 @@
   "scripts": {
     "test": "error",
     "start": "node /server/src/index.js",
-    "build": "cd eneyida && npm run build",
-    "install": "cd eneyida && npm install --legacy-peer-deps && cd ../server && npm install"
+    "build": "cd eneyida && yarn build",
+    "install": "cd eneyida && yarn install --legacy-peer-deps && cd ../server && yarn install"
   },
   "author": "Davyd Smyk",
   "license": "ISC",
