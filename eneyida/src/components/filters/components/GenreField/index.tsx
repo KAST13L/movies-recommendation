@@ -27,7 +27,7 @@ export const GenreField: React.FC<GenreFieldPropsType> = ({ data }) => {
                                 label={placeholder}
                                 {...input}
                             >
-                                {data.genres.map(({ name, id }) => (
+                                {data?.genres?.map(({ name, id }) => (
                                     <MenuItem key={id} value={id}>
                                         {name}
                                     </MenuItem>

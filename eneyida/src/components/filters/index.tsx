@@ -1,21 +1,32 @@
-import { Form } from 'react-final-form'
+import {Form} from 'react-final-form'
 import Box from '@mui/material/Box';
-import { SortField, SortDirectionField, AdultField, YearField, SubmitField, ReleaseYearField, GenreField } from './components';
-import { GENRES_QUERY } from './queries';
-import { useQuery } from "@apollo/client";
+import {
+    AdultField,
+    GenreField,
+    ReleaseYearField,
+    SortDirectionField,
+    SortField,
+    SubmitField,
+    YearField
+} from './components';
+import {GENRES_QUERY} from './queries';
+import {useQuery} from "@apollo/client";
 
-export const Filters = ({ onSubmit, initialValues}: any) => {
-    const {loading, error, data } = useQuery(GENRES_QUERY);
-
+export const Filters = ({onSubmit, initialValues}: any) => {
+    const {loading, error, data} = useQuery(GENRES_QUERY);
 
     return (
         <div>
             <Form
                 onSubmit={onSubmit}
                 initialValues={initialValues}
-                render={({ handleSubmit, form, submitting, pristine, values }) => (
+                render={({handleSubmit, form, submitting, pristine, values}) => (
                     <form onSubmit={handleSubmit}>
-                        <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between'
+                        }}>
                             <Box sx={{display: 'flex', alignItems: 'center'}}>
                                 <Box mr={3}>
                                     <YearField/>
@@ -25,9 +36,9 @@ export const Filters = ({ onSubmit, initialValues}: any) => {
                                     <ReleaseYearField/>
                                 </Box>
 
-                                {/*<Box mr={3}>
+                                <Box mr={3}>
                                     <GenreField data={data}/>
-                                </Box>*/}
+                                </Box>
 
                                 <AdultField/>
                             </Box>
@@ -39,7 +50,7 @@ export const Filters = ({ onSubmit, initialValues}: any) => {
                                 <SortDirectionField/>
                             </Box>
                         </Box>
-                        <Box >
+                        <Box>
                             <SubmitField/>
                         </Box>
                     </form>
