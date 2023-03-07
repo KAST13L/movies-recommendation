@@ -1,11 +1,11 @@
-const {IMAGE_BASE_PATH} = require("../../../config");
+const {IMAGE_BASE_URL} = require("../../../config");
 
 class Movie {
     constructor(movie) {
         this.id = movie.id
         this.title = movie.title
         this.releaseDate = movie.release_date
-        this.posterPath = IMAGE_BASE_PATH + movie.poster_path
+        this.posterPath = IMAGE_BASE_URL + movie.poster_path
         this.adult = movie.adult
         this.overview = movie.overview
         this.originalTitle = movie.original_title
