@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Box, Grid, Paper} from "@mui/material";
 import {MovieType} from "../../types/types";
 import {MovieCard} from "./movieCard";
@@ -9,12 +9,13 @@ import {MOVIES_QUERY} from "../../pages/home/queries";
 
 interface MoviesListPropsType {
     selectMovie: (movie: MovieType) => void
+    filter: any
+    setPage: (page: number) => void
 }
 
-export const MoviesList: React.FC<MoviesListPropsType> = ({selectMovie}) => {
+export const MoviesList: React.FC<MoviesListPropsType> = ({selectMovie,filter, setPage}) => {
 
-    const [page, setPage] = useState(1)
-    const {loading, error, data} = useQuery(MOVIES_QUERY, {variables: {page}})
+    const {loading, error, data} = useQuery(MOVIES_QUERY, {variables: {filter}})
 
     if (error) {
         return <div>ERROR</div>
@@ -39,7 +40,7 @@ export const MoviesList: React.FC<MoviesListPropsType> = ({selectMovie}) => {
                     <Stack spacing={2} sx={{margin: 3}}>
                         <Pagination
                             count={500}
-                            page={page}
+                            page={filter.page}
                             onChange={(event, page) => setPage(page)}
                         />
                     </Stack>
