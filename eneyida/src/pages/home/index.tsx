@@ -2,11 +2,11 @@ import React from 'react';
 import {Box, Grid, Paper} from "@mui/material";
 import {MoviesList} from "../../components/moviesList";
 import {useMovies} from "../../hooks/useMovies/useMovies";
-import {SelectedCardMoviesList} from '../../components/selectedMoviesList';
 import {Filters} from '../../components/filters';
 import {useFilters} from "../../hooks/useFilters";
 import {useQuery} from "@apollo/client";
 import {MOVIES_QUERY} from "./queries";
+import {SelectedCardMoviesList} from "../../components";
 
 
 export const Home = () => {
