@@ -1,5 +1,6 @@
 export const MAX_SELECTED_MOVIES = 20;
 export const CONFIRM_TIMEOUT = 3000;
+export const URI_FOR_GRAPHQL = window.location.hostname === 'localhost' ? 'http://localhost:4000/graphql' : `${window.location.origin}/graphql`
 export const LOCALES = {
     ENGLISH: 'en-us',
     UKRAINIAN: 'uk'
