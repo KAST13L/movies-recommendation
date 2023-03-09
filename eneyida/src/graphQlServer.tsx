@@ -19,7 +19,6 @@ export const GraphQlServer = ({component}: GraphQlServerPropsType,) => {
 
     const {state} = useContext(AppContext)
 
-
     const httpLink = createHttpLink({
         uri: URI_FOR_GRAPHQL
     });
