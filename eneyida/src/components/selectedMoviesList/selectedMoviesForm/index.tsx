@@ -52,6 +52,8 @@ export const SelectedMoviesForm: React.FC<SelectedMoviesFormPropsType> = ({selec
                                         variant={'outlined'}
                                         fullWidth
                                         inputProps={{'aria-label': 'put list name'}}
+                                        label={<FormattedMessage
+                                            id={'form_input_placeholder'}/>}
                                     />
                                     {meta.error && meta.touched && <Typography sx={{
                                         color: 'red',
