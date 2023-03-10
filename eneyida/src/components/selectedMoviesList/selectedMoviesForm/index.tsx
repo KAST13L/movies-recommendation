@@ -32,6 +32,7 @@ export const SelectedMoviesForm: React.FC<SelectedMoviesFormPropsType> = ({selec
         setLink('')
     }
 
+
     return (<Box sx={{m: '5px 0'}}>
             <Form
                 onSubmit={onSubmit}
