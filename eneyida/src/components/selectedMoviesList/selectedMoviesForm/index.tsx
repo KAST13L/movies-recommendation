@@ -28,7 +28,6 @@ export const SelectedMoviesForm: React.FC<SelectedMoviesFormPropsType> = ({selec
         setListName(listName)
     }
 
-
     const onCloseModal = () => {
         setLink('')
     }
