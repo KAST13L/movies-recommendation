@@ -18,7 +18,7 @@ export const MovieCard: React.FC<MovieCardPropsType> = ({movie, onSelectClick}) 
         <Card sx={{maxWidth: 250, position: 'relative'}}>
             <RightTopButtonMenu callback={(movie: MovieType) => onSelectClick(movie)}
                                 movie={movie}/>
-            <Tooltip title={<FormattedMessage id="select" />} followCursor enterDelay={500}
+            <Tooltip title={<FormattedMessage id="select"/>} followCursor enterDelay={500}
                      enterNextDelay={500}>
                 <CardMedia
                     component="img"
