@@ -5,7 +5,7 @@ export const LOCALES = {
     ENGLISH: 'en-us',
     UKRAINIAN: 'uk'
 }
-export const LOCALHOST_URL_LENGTH = window.location.hostname === 'localhost' ? 15 : window.location.origin.length + 7;
+export const LOCALHOST_URL_LENGTH = window.location.hostname === 'localhost' ? 15 : window.location.origin.length - 7;
 export const STORAGE_KEY = 'locale';
 
 export const SORT_OPTIONS = [
